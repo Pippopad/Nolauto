@@ -16,5 +16,10 @@ namespace Nolauto
         {
             InitializeComponent();
         }
+
+        private void esciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
