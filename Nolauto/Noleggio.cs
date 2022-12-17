@@ -8,13 +8,13 @@ namespace Nolauto
 {
     public class Noleggio
     {
-        public static int ID_COUNTER = 0;
+        private static int ID_COUNTER = 0;
 
-        public int Id { get; set; }
+        public int Id { get; }
         public DateTime DataInizio { get; set; }
         public int NumeroGiorni { get; set; }
         public double Costo { get; set; }
-        public Cliente Cliente { get; set; }
+        public Cliente Cliente { get; }
 
         public Noleggio(DateTime dataInizio, int numeroGiorni, double costo, Cliente cliente)
         {

@@ -9,14 +9,16 @@ namespace Nolauto
     public abstract class Veicolo
     {
         public string Targa { get; set; }
-        public string Modello { get; set; }
+        public string Marca { get; set; }
         public double Tariffa { get; set; }
+        public double Kilowatt { get; }
 
-        public Veicolo(string targa, string modello, double tariffa)
+        public Veicolo(string targa, string marca, double tariffa, double kilowatt)
         {
             this.Targa = targa;
-            this.Modello = modello;
+            this.Marca = marca;
             this.Tariffa = tariffa;
+            this.Kilowatt = kilowatt;
         }
     }
 }

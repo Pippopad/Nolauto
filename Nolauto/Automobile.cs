@@ -10,7 +10,7 @@ namespace Nolauto
     {
         public int NumeroPosti { get; set; }
 
-        public Automobile(string targa, string modello, double tariffa, int numeroPosti) : base(targa, modello, tariffa)
+        public Automobile(string targa, string modello, double tariffa, double kilowatt, int numeroPosti) : base(targa, modello, tariffa, kilowatt)
         {
             this.NumeroPosti = numeroPosti;
         }
