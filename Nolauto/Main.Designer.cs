@@ -34,13 +34,22 @@
             this.apriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvaComeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.esciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aggiungiVeicoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.automobileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.furgoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rimuoviVeicoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.aggiungiNoleggioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstVeicoli = new System.Windows.Forms.ListView();
             this.colTarga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMarca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTariffa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colKilowatt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPostiCapacita = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lstNoleggi = new System.Windows.Forms.ListView();
             this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,7 +57,6 @@
             this.colNumeroGiorni = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCosto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colPostiCapacita = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mainMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -57,7 +65,8 @@
             // mainMenu
             // 
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.datiToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
             this.mainMenu.Size = new System.Drawing.Size(781, 24);
@@ -71,6 +80,7 @@
             this.apriToolStripMenuItem,
             this.salvaToolStripMenuItem,
             this.salvaComeToolStripMenuItem,
+            this.toolStripSeparator1,
             this.esciToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -79,33 +89,87 @@
             // nuovoToolStripMenuItem
             // 
             this.nuovoToolStripMenuItem.Name = "nuovoToolStripMenuItem";
-            this.nuovoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuovoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.nuovoToolStripMenuItem.Text = "&Nuovo";
             // 
             // apriToolStripMenuItem
             // 
             this.apriToolStripMenuItem.Name = "apriToolStripMenuItem";
-            this.apriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apriToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.apriToolStripMenuItem.Text = "&Apri";
             // 
             // salvaToolStripMenuItem
             // 
             this.salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
-            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.salvaToolStripMenuItem.Text = "&Salva";
             // 
             // salvaComeToolStripMenuItem
             // 
             this.salvaComeToolStripMenuItem.Name = "salvaComeToolStripMenuItem";
-            this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.salvaComeToolStripMenuItem.Text = "Sa&lva come...";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
             // 
             // esciToolStripMenuItem
             // 
             this.esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            this.esciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.esciToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.esciToolStripMenuItem.Text = "&Esci";
             this.esciToolStripMenuItem.Click += new System.EventHandler(this.esciToolStripMenuItem_Click);
+            // 
+            // datiToolStripMenuItem
+            // 
+            this.datiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aggiungiVeicoloToolStripMenuItem,
+            this.rimuoviVeicoloToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.aggiungiNoleggioToolStripMenuItem});
+            this.datiToolStripMenuItem.Name = "datiToolStripMenuItem";
+            this.datiToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.datiToolStripMenuItem.Text = "&Dati";
+            // 
+            // aggiungiVeicoloToolStripMenuItem
+            // 
+            this.aggiungiVeicoloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.automobileToolStripMenuItem,
+            this.furgoneToolStripMenuItem});
+            this.aggiungiVeicoloToolStripMenuItem.Name = "aggiungiVeicoloToolStripMenuItem";
+            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiVeicoloToolStripMenuItem.Text = "&Aggiungi veicolo";
+            // 
+            // automobileToolStripMenuItem
+            // 
+            this.automobileToolStripMenuItem.Name = "automobileToolStripMenuItem";
+            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.automobileToolStripMenuItem.Text = "&Automobile";
+            // 
+            // furgoneToolStripMenuItem
+            // 
+            this.furgoneToolStripMenuItem.Name = "furgoneToolStripMenuItem";
+            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.furgoneToolStripMenuItem.Text = "&Furgone";
+            // 
+            // rimuoviVeicoloToolStripMenuItem
+            // 
+            this.rimuoviVeicoloToolStripMenuItem.Name = "rimuoviVeicoloToolStripMenuItem";
+            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviVeicoloToolStripMenuItem.Text = "&Rimuovi veicolo";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // aggiungiNoleggioToolStripMenuItem
+            // 
+            this.aggiungiNoleggioToolStripMenuItem.Name = "aggiungiNoleggioToolStripMenuItem";
+            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiNoleggioToolStripMenuItem.Text = "A&ggiungi noleggio";
             // 
             // groupBox1
             // 
@@ -154,6 +218,11 @@
             // 
             this.colKilowatt.Text = "Kilowatt";
             this.colKilowatt.Width = 50;
+            // 
+            // colPostiCapacita
+            // 
+            this.colPostiCapacita.Text = "Posti/Capacità";
+            this.colPostiCapacita.Width = 87;
             // 
             // groupBox2
             // 
@@ -208,11 +277,6 @@
             this.colCliente.Text = "Cliente";
             this.colCliente.Width = 116;
             // 
-            // colPostiCapacita
-            // 
-            this.colPostiCapacita.Text = "Posti/Capacità";
-            this.colPostiCapacita.Width = 87;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +309,7 @@
         private System.Windows.Forms.ToolStripMenuItem apriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salvaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salvaComeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem esciToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView lstVeicoli;
@@ -260,6 +325,13 @@
         private System.Windows.Forms.ColumnHeader colCosto;
         private System.Windows.Forms.ColumnHeader colCliente;
         private System.Windows.Forms.ColumnHeader colPostiCapacita;
+        private System.Windows.Forms.ToolStripMenuItem datiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aggiungiVeicoloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem automobileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem furgoneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rimuoviVeicoloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem aggiungiNoleggioToolStripMenuItem;
     }
 }
 
