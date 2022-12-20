@@ -148,12 +148,14 @@
             this.automobileToolStripMenuItem.Name = "automobileToolStripMenuItem";
             this.automobileToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.automobileToolStripMenuItem.Text = "&Automobile";
+            this.automobileToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // furgoneToolStripMenuItem
             // 
             this.furgoneToolStripMenuItem.Name = "furgoneToolStripMenuItem";
             this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.furgoneToolStripMenuItem.Text = "&Furgone";
+            this.furgoneToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // rimuoviVeicoloToolStripMenuItem
             // 
@@ -205,12 +207,12 @@
             // colTarga
             // 
             this.colTarga.Text = "Targa";
-            this.colTarga.Width = 88;
+            this.colTarga.Width = 86;
             // 
             // colMarca
             // 
             this.colMarca.Text = "Marca";
-            this.colMarca.Width = 90;
+            this.colMarca.Width = 85;
             // 
             // colTariffa
             // 

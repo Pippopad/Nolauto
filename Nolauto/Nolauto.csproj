@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Automobile.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="DialogBox\AggiungiVeicoloDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AggiungiVeicoloDialog.Designer.cs">
+      <DependentUpon>AggiungiVeicoloDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Furgone.cs" />
     <Compile Include="GestoreVeicoli.cs" />
     <Compile Include="Main.cs">
@@ -60,6 +66,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Veicolo.cs" />
+    <EmbeddedResource Include="DialogBox\AggiungiVeicoloDialog.resx">
+      <DependentUpon>AggiungiVeicoloDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,5 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@ namespace Nolauto
     {
         public double CapacitaDiCarico { get; set; }
 
-        public Furgone(string targa, string modello, double tariffa, double kilowatt, double capacitaDiCarico) : base(targa, modello, tariffa, kilowatt)
+        public Furgone(string targa, string marca, double tariffa, double kilowatt, double capacitaDiCarico) : base(targa, marca, tariffa, kilowatt)
         {
             this.CapacitaDiCarico = capacitaDiCarico;
         }

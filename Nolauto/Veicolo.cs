@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Nolauto
 {
+    public enum TipoVeicolo
+    {
+        Automobile,
+        Furgone,
+    }
+
     public abstract class Veicolo
     {
         public string Targa { get; set; }
