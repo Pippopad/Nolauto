@@ -50,6 +50,7 @@
             this.colTariffa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colKilowatt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPostiCapacita = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lstNoleggi = new System.Windows.Forms.ListView();
             this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -69,7 +70,7 @@
             this.datiToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(781, 24);
+            this.mainMenu.Size = new System.Drawing.Size(976, 24);
             this.mainMenu.TabIndex = 0;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -139,36 +140,36 @@
             this.automobileToolStripMenuItem,
             this.furgoneToolStripMenuItem});
             this.aggiungiVeicoloToolStripMenuItem.Name = "aggiungiVeicoloToolStripMenuItem";
-            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.aggiungiVeicoloToolStripMenuItem.Text = "&Aggiungi veicolo";
             // 
             // automobileToolStripMenuItem
             // 
             this.automobileToolStripMenuItem.Name = "automobileToolStripMenuItem";
-            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.automobileToolStripMenuItem.Text = "&Automobile";
             // 
             // furgoneToolStripMenuItem
             // 
             this.furgoneToolStripMenuItem.Name = "furgoneToolStripMenuItem";
-            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.furgoneToolStripMenuItem.Text = "&Furgone";
             // 
             // rimuoviVeicoloToolStripMenuItem
             // 
             this.rimuoviVeicoloToolStripMenuItem.Name = "rimuoviVeicoloToolStripMenuItem";
-            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.rimuoviVeicoloToolStripMenuItem.Text = "&Rimuovi veicolo";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
             // 
             // aggiungiNoleggioToolStripMenuItem
             // 
             this.aggiungiNoleggioToolStripMenuItem.Name = "aggiungiNoleggioToolStripMenuItem";
-            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.aggiungiNoleggioToolStripMenuItem.Text = "A&ggiungi noleggio";
             // 
             // groupBox1
@@ -176,7 +177,7 @@
             this.groupBox1.Controls.Add(this.lstVeicoli);
             this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 323);
+            this.groupBox1.Size = new System.Drawing.Size(476, 323);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Veicoli";
@@ -188,14 +189,15 @@
             this.colMarca,
             this.colTariffa,
             this.colKilowatt,
-            this.colPostiCapacita});
+            this.colPostiCapacita,
+            this.colTipo});
             this.lstVeicoli.FullRowSelect = true;
             this.lstVeicoli.GridLines = true;
             this.lstVeicoli.HideSelection = false;
             this.lstVeicoli.Location = new System.Drawing.Point(6, 19);
             this.lstVeicoli.MultiSelect = false;
             this.lstVeicoli.Name = "lstVeicoli";
-            this.lstVeicoli.Size = new System.Drawing.Size(361, 298);
+            this.lstVeicoli.Size = new System.Drawing.Size(464, 298);
             this.lstVeicoli.TabIndex = 0;
             this.lstVeicoli.UseCompatibleStateImageBehavior = false;
             this.lstVeicoli.View = System.Windows.Forms.View.Details;
@@ -203,33 +205,39 @@
             // colTarga
             // 
             this.colTarga.Text = "Targa";
+            this.colTarga.Width = 88;
             // 
             // colMarca
             // 
             this.colMarca.Text = "Marca";
-            this.colMarca.Width = 103;
+            this.colMarca.Width = 90;
             // 
             // colTariffa
             // 
             this.colTariffa.Text = "Tariffa";
-            this.colTariffa.Width = 55;
+            this.colTariffa.Width = 52;
             // 
             // colKilowatt
             // 
             this.colKilowatt.Text = "Kilowatt";
-            this.colKilowatt.Width = 50;
+            this.colKilowatt.Width = 52;
             // 
             // colPostiCapacita
             // 
             this.colPostiCapacita.Text = "Posti/Capacità";
-            this.colPostiCapacita.Width = 87;
+            this.colPostiCapacita.Width = 91;
+            // 
+            // colTipo
+            // 
+            this.colTipo.Text = "Tipo";
+            this.colTipo.Width = 91;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lstNoleggi);
-            this.groupBox2.Location = new System.Drawing.Point(392, 28);
+            this.groupBox2.Location = new System.Drawing.Point(495, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(377, 323);
+            this.groupBox2.Size = new System.Drawing.Size(469, 323);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Noleggi";
@@ -248,7 +256,7 @@
             this.lstNoleggi.Location = new System.Drawing.Point(6, 19);
             this.lstNoleggi.MultiSelect = false;
             this.lstNoleggi.Name = "lstNoleggi";
-            this.lstNoleggi.Size = new System.Drawing.Size(365, 298);
+            this.lstNoleggi.Size = new System.Drawing.Size(457, 298);
             this.lstNoleggi.TabIndex = 0;
             this.lstNoleggi.UseCompatibleStateImageBehavior = false;
             this.lstNoleggi.View = System.Windows.Forms.View.Details;
@@ -256,17 +264,17 @@
             // colId
             // 
             this.colId.Text = "Id";
-            this.colId.Width = 27;
+            this.colId.Width = 38;
             // 
             // colDataInizio
             // 
             this.colDataInizio.Text = "Data Inizio";
-            this.colDataInizio.Width = 73;
+            this.colDataInizio.Width = 100;
             // 
             // colNumeroGiorni
             // 
             this.colNumeroGiorni.Text = "Numero Giorni";
-            this.colNumeroGiorni.Width = 84;
+            this.colNumeroGiorni.Width = 90;
             // 
             // colCosto
             // 
@@ -275,13 +283,13 @@
             // colCliente
             // 
             this.colCliente.Text = "Cliente";
-            this.colCliente.Width = 116;
+            this.colCliente.Width = 150;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 363);
+            this.ClientSize = new System.Drawing.Size(976, 363);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mainMenu);
@@ -332,6 +340,7 @@
         private System.Windows.Forms.ToolStripMenuItem rimuoviVeicoloToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem aggiungiNoleggioToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader colTipo;
     }
 }
 

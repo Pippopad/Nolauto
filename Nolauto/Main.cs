@@ -15,6 +15,8 @@ namespace Nolauto
         public Main()
         {
             InitializeComponent();
+
+            GestoreVeicoli.Inizializza(this.lstVeicoli);
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)

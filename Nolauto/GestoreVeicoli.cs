@@ -4,16 +4,19 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Nolauto
 {
     public static class GestoreVeicoli
     {
         private static List<Veicolo> Veicoli;
+        private static ListView View;
 
-        public static void Inizializza()
+        public static void Inizializza(ListView view)
         {
             Veicoli = new List<Veicolo>();
+            View = view;
         }
 
         public static bool AggiungiVeicolo(Veicolo v)
@@ -21,16 +24,13 @@ namespace Nolauto
             if (Veicoli.Find((veicolo) => veicolo.Targa == v.Targa) != null) return false;
 
             Veicoli.Add(v);
+            UpdateView();
             return true;
         }
 
         public static bool RimuoviVeicolo(Veicolo v)
         {
-            Veicolo found = Veicoli.Find((veicolo) => veicolo.Targa == v.Targa);
-            if (found == null) return false;
-
-            Veicoli.Remove(found);
-            return true;
+            return RimuoviVeicolo(v.Targa);
         }
 
         public static bool RimuoviVeicolo(string targa)
@@ -39,6 +39,7 @@ namespace Nolauto
             if (found == null) return false;
 
             Veicoli.Remove(found);
+            UpdateView();
             return true;
         }
 
@@ -50,6 +51,31 @@ namespace Nolauto
         public static Veicolo Get(string targa)
         {
             return Veicoli.Find((veicolo) => veicolo.Targa == targa);
+        }
+
+        public static void UpdateView()
+        {
+            View.Items.Clear();
+            foreach (Veicolo v in Veicoli)
+            {
+                ListViewItem item = new ListViewItem(v.Targa);
+                item.SubItems.Add(v.Marca);
+                item.SubItems.Add(v.Tariffa.ToString());
+                item.SubItems.Add(v.Kilowatt.ToString());
+
+                if (v is Automobile)
+                {
+                    item.SubItems.Add((v as Automobile).NumeroPosti.ToString());
+                    item.SubItems.Add(nameof(Automobile));
+                }
+                if (v is Furgone)
+                {
+                    item.SubItems.Add((v as Furgone).CapacitaDiCarico.ToString());
+                    item.SubItems.Add(nameof(Furgone));
+                }
+
+                View.Items.Add(item);
+            }
         }
     }
 }
