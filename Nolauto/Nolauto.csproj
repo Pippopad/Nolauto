@@ -49,6 +49,7 @@
     <Compile Include="Automobile.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Furgone.cs" />
+    <Compile Include="GestoreVeicoli.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
