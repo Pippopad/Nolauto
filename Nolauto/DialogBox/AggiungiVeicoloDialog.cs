@@ -24,9 +24,13 @@ namespace Nolauto.DialogBox
                 {
                     case TipoVeicolo.Automobile:
                         lblPostiCapacita.Text = "Numero Posti:";
+                        txtPostiCapacita.Minimum = 4;
+                        txtPostiCapacita.Maximum = 7;
                         break;
                     case TipoVeicolo.Furgone:
                         lblPostiCapacita.Text = "Capacità di carico:";
+                        txtPostiCapacita.Minimum = 300;
+                        txtPostiCapacita.Maximum = 600;
                         break;
                 }
             }
@@ -46,6 +50,18 @@ namespace Nolauto.DialogBox
             double tariffa = (double)txtTariffa.Value;
             double kilowatt = (double)txtKilowatt.Value;
             double postiCapacita = (double)txtPostiCapacita.Value;
+
+            if (!Helper.ControlloTarga(targa))
+            {
+                Helper.MsgErrore("La targa non è valida!", this.Text);
+                return;
+            }
+
+            if (!Helper.ControlloStringa(marca))
+            {
+                Helper.MsgErrore("Inserisci la marca!", this.Text);
+                return;
+            }
 
             Veicolo v = null;
             switch (this.Tipo)

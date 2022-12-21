@@ -20,5 +20,10 @@ namespace Nolauto
         {
             MessageBox.Show(messaggio, titolo, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public static bool ControlloStringa(string str)
+        {
+            return !string.IsNullOrWhiteSpace(str);
+        }
     }
 }

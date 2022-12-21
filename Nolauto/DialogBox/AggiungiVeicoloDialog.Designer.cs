@@ -90,23 +90,53 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Tariffa:";
+            this.label4.Text = "Tariffa giornaliera:";
             // 
             // txtTariffa
             // 
             this.txtTariffa.Location = new System.Drawing.Point(131, 63);
+            this.txtTariffa.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.txtTariffa.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.txtTariffa.Name = "txtTariffa";
             this.txtTariffa.Size = new System.Drawing.Size(74, 20);
             this.txtTariffa.TabIndex = 8;
+            this.txtTariffa.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             // 
             // txtKilowatt
             // 
             this.txtKilowatt.Location = new System.Drawing.Point(131, 89);
+            this.txtKilowatt.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.txtKilowatt.Minimum = new decimal(new int[] {
+            65,
+            0,
+            0,
+            0});
             this.txtKilowatt.Name = "txtKilowatt";
             this.txtKilowatt.Size = new System.Drawing.Size(74, 20);
             this.txtKilowatt.TabIndex = 9;
+            this.txtKilowatt.Value = new decimal(new int[] {
+            65,
+            0,
+            0,
+            0});
             // 
             // txtPostiCapacita
             // 
