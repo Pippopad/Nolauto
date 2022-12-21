@@ -37,6 +37,14 @@ namespace Nolauto
             }
         }
 
+        private void rimuoviVeicoloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string targa = (sender as ToolStripMenuItem).Name;
+
+            GestoreVeicoli.RimuoviVeicolo(targa);
+            UpdateView();
+        }
+
         private void UpdateView()
         {
             UpdateListView();
@@ -73,7 +81,10 @@ namespace Nolauto
             rimuoviVeicoloToolStripMenuItem.DropDownItems.Clear();
             foreach (Veicolo v in GestoreVeicoli.GetAll())
             {
-                rimuoviVeicoloToolStripMenuItem.DropDownItems.Add($"{v.Marca} ({v.Targa})");
+                ToolStripMenuItem item = new ToolStripMenuItem($"{v.Marca} ({v.Targa})");
+                item.Name = v.Targa;
+                item.Click += rimuoviVeicoloToolStripMenuItem_Click;
+                rimuoviVeicoloToolStripMenuItem.DropDownItems.Add(item);
             }
         }
     }
