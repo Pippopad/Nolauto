@@ -27,5 +27,16 @@ namespace Nolauto.DialogBox
 
             this.DialogResult = DialogResult.OK;
         }
+
+        private void btnSelezionaVeicolo_Click(object sender, EventArgs e)
+        {
+            using (var svDialog = new SelezionaVeicoloDialog())
+            {
+                if (svDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtVeicolo.Text = svDialog.VeicoloSelezionato.Targa;
+                }
+            }
+        }
     }
 }

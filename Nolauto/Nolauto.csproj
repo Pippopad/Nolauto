@@ -60,6 +60,12 @@
     <Compile Include="DialogBox\AggiungiVeicoloDialog.Designer.cs">
       <DependentUpon>AggiungiVeicoloDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogBox\SelezionaVeicoloDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\SelezionaVeicoloDialog.Designer.cs">
+      <DependentUpon>SelezionaVeicoloDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Furgone.cs" />
     <Compile Include="GestoreVeicoli.cs" />
     <Compile Include="Helper.cs" />
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBox\AggiungiVeicoloDialog.resx">
       <DependentUpon>AggiungiVeicoloDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\SelezionaVeicoloDialog.resx">
+      <DependentUpon>SelezionaVeicoloDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
