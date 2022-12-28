@@ -58,6 +58,10 @@
             this.colNumeroGiorni = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCosto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.rimuoviNoleggioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.aggiungiClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rimuoviClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -129,7 +133,11 @@
             this.aggiungiVeicoloToolStripMenuItem,
             this.rimuoviVeicoloToolStripMenuItem,
             this.toolStripSeparator2,
-            this.aggiungiNoleggioToolStripMenuItem});
+            this.aggiungiNoleggioToolStripMenuItem,
+            this.rimuoviNoleggioToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.aggiungiClienteToolStripMenuItem,
+            this.rimuoviClienteToolStripMenuItem});
             this.datiToolStripMenuItem.Name = "datiToolStripMenuItem";
             this.datiToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.datiToolStripMenuItem.Text = "&Dati";
@@ -288,6 +296,29 @@
             this.colCliente.Text = "Cliente";
             this.colCliente.Width = 150;
             // 
+            // rimuoviNoleggioToolStripMenuItem
+            // 
+            this.rimuoviNoleggioToolStripMenuItem.Name = "rimuoviNoleggioToolStripMenuItem";
+            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviNoleggioToolStripMenuItem.Text = "R&imuovi noleggio";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // aggiungiClienteToolStripMenuItem
+            // 
+            this.aggiungiClienteToolStripMenuItem.Name = "aggiungiClienteToolStripMenuItem";
+            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiClienteToolStripMenuItem.Text = "Aggi&ungi cliente";
+            // 
+            // rimuoviClienteToolStripMenuItem
+            // 
+            this.rimuoviClienteToolStripMenuItem.Name = "rimuoviClienteToolStripMenuItem";
+            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviClienteToolStripMenuItem.Text = "Ri&muovi cliente";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +375,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem aggiungiNoleggioToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader colTipo;
+        private System.Windows.Forms.ToolStripMenuItem rimuoviNoleggioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem aggiungiClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rimuoviClienteToolStripMenuItem;
     }
 }
 
