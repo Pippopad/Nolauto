@@ -59,7 +59,7 @@
             this.txtVeicolo.Location = new System.Drawing.Point(59, 10);
             this.txtVeicolo.Name = "txtVeicolo";
             this.txtVeicolo.ReadOnly = true;
-            this.txtVeicolo.Size = new System.Drawing.Size(97, 20);
+            this.txtVeicolo.Size = new System.Drawing.Size(129, 20);
             this.txtVeicolo.TabIndex = 1;
             // 
             // txtCliente
@@ -67,7 +67,7 @@
             this.txtCliente.Location = new System.Drawing.Point(59, 36);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(97, 20);
+            this.txtCliente.Size = new System.Drawing.Size(129, 20);
             this.txtCliente.TabIndex = 3;
             // 
             // label2
@@ -99,7 +99,7 @@
             // 
             // txtNumeroGiorni
             // 
-            this.txtNumeroGiorni.Location = new System.Drawing.Point(131, 89);
+            this.txtNumeroGiorni.Location = new System.Drawing.Point(162, 89);
             this.txtNumeroGiorni.Maximum = new decimal(new int[] {
             7,
             0,
@@ -121,7 +121,7 @@
             // 
             // txtCosto
             // 
-            this.txtCosto.Location = new System.Drawing.Point(131, 115);
+            this.txtCosto.Location = new System.Drawing.Point(162, 115);
             this.txtCosto.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -152,7 +152,7 @@
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(131, 141);
+            this.btnAggiungi.Location = new System.Drawing.Point(162, 141);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(75, 23);
             this.btnAggiungi.TabIndex = 8;
@@ -162,7 +162,7 @@
             // 
             // btnSelezionaVeicolo
             // 
-            this.btnSelezionaVeicolo.Location = new System.Drawing.Point(163, 8);
+            this.btnSelezionaVeicolo.Location = new System.Drawing.Point(194, 8);
             this.btnSelezionaVeicolo.Name = "btnSelezionaVeicolo";
             this.btnSelezionaVeicolo.Size = new System.Drawing.Size(43, 23);
             this.btnSelezionaVeicolo.TabIndex = 2;
@@ -172,27 +172,28 @@
             // 
             // btnSelezionaCliente
             // 
-            this.btnSelezionaCliente.Location = new System.Drawing.Point(163, 34);
+            this.btnSelezionaCliente.Location = new System.Drawing.Point(194, 34);
             this.btnSelezionaCliente.Name = "btnSelezionaCliente";
             this.btnSelezionaCliente.Size = new System.Drawing.Size(43, 23);
             this.btnSelezionaCliente.TabIndex = 4;
             this.btnSelezionaCliente.Text = "...";
             this.btnSelezionaCliente.UseVisualStyleBackColor = true;
+            this.btnSelezionaCliente.Click += new System.EventHandler(this.btnSelezionaCliente_Click);
             // 
             // dtpDataInizio
             // 
             this.dtpDataInizio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInizio.Location = new System.Drawing.Point(121, 62);
+            this.dtpDataInizio.Location = new System.Drawing.Point(141, 62);
             this.dtpDataInizio.MinDate = new System.DateTime(2022, 12, 28, 0, 0, 0, 0);
             this.dtpDataInizio.Name = "dtpDataInizio";
-            this.dtpDataInizio.Size = new System.Drawing.Size(84, 20);
+            this.dtpDataInizio.Size = new System.Drawing.Size(95, 20);
             this.dtpDataInizio.TabIndex = 5;
             // 
             // AggiungiNoleggioDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 171);
+            this.ClientSize = new System.Drawing.Size(247, 171);
             this.Controls.Add(this.dtpDataInizio);
             this.Controls.Add(this.btnSelezionaCliente);
             this.Controls.Add(this.btnSelezionaVeicolo);

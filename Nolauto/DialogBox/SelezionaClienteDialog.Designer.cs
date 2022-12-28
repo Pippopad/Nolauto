@@ -1,6 +1,6 @@
 ﻿namespace Nolauto.DialogBox
 {
-    partial class SelezionaVeicoloDialog
+    partial class SelezionaClienteDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstVeicoli = new System.Windows.Forms.ListBox();
+            this.lstClienti = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // lstVeicoli
+            // lstClienti
             // 
-            this.lstVeicoli.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstVeicoli.FormattingEnabled = true;
-            this.lstVeicoli.Location = new System.Drawing.Point(0, 0);
-            this.lstVeicoli.Name = "lstVeicoli";
-            this.lstVeicoli.Size = new System.Drawing.Size(189, 309);
-            this.lstVeicoli.TabIndex = 0;
-            this.lstVeicoli.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstVeicoli_MouseDoubleClick);
+            this.lstClienti.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstClienti.FormattingEnabled = true;
+            this.lstClienti.Location = new System.Drawing.Point(0, 0);
+            this.lstClienti.Name = "lstClienti";
+            this.lstClienti.Size = new System.Drawing.Size(270, 309);
+            this.lstClienti.TabIndex = 0;
+            this.lstClienti.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstClienti_MouseDoubleClick);
             // 
-            // SelezionaVeicoloDialog
+            // SelezionaClienteDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(189, 309);
-            this.Controls.Add(this.lstVeicoli);
+            this.ClientSize = new System.Drawing.Size(270, 309);
+            this.Controls.Add(this.lstClienti);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SelezionaVeicoloDialog";
+            this.Name = "SelezionaClienteDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Seleziona Veicolo";
+            this.Text = "Seleziona Cliente";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstVeicoli;
+        private System.Windows.Forms.ListBox lstClienti;
     }
 }
