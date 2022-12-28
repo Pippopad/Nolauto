@@ -32,7 +32,7 @@ namespace Nolauto
 
         public static bool RimuoviVeicolo(string targa)
         {
-            Veicolo found = Veicoli.Find((veicolo) => veicolo.Targa == targa);
+            Veicolo found = Veicoli.Find((veicolo) => veicolo.Targa == targa.ToUpper());
             if (found == null) return false;
 
             Veicoli.Remove(found);
@@ -46,7 +46,7 @@ namespace Nolauto
 
         public static Veicolo Get(string targa)
         {
-            return Veicoli.Find((veicolo) => veicolo.Targa == targa);
+            return Veicoli.Find((veicolo) => veicolo.Targa == targa.ToUpper());
         }
     }
 }

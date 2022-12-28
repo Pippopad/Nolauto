@@ -54,6 +54,12 @@
     <Compile Include="DialogBox\AggiungiNoleggioDialog.Designer.cs">
       <DependentUpon>AggiungiNoleggioDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogBox\AggiungiClienteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AggiungiClienteDialog.Designer.cs">
+      <DependentUpon>AggiungiClienteDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogBox\AggiungiVeicoloDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,7 @@
       <DependentUpon>SelezionaVeicoloDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Furgone.cs" />
+    <Compile Include="GestoreClienti.cs" />
     <Compile Include="GestoreVeicoli.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Main.cs">
@@ -81,6 +88,9 @@
     <Compile Include="Veicolo.cs" />
     <EmbeddedResource Include="DialogBox\AggiungiNoleggioDialog.resx">
       <DependentUpon>AggiungiNoleggioDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\AggiungiClienteDialog.resx">
+      <DependentUpon>AggiungiClienteDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBox\AggiungiVeicoloDialog.resx">
       <DependentUpon>AggiungiVeicoloDialog.cs</DependentUpon>

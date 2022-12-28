@@ -14,9 +14,14 @@ namespace Nolauto
 
         public Cliente(string codiceFiscale, string nome, string cognome)
         {
-            this.CodiceFiscale = codiceFiscale;
+            this.CodiceFiscale = codiceFiscale.ToUpper();
             this.Nome = nome;
             this.Cognome = cognome;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Nome} {this.Cognome} ({this.CodiceFiscale})";
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Nolauto
 
         public Veicolo(string targa, string marca, double tariffa, double kilowatt)
         {
-            this.Targa = targa;
+            this.Targa = targa.ToUpper();
             this.Marca = marca;
             this.Tariffa = tariffa;
             this.Kilowatt = kilowatt;

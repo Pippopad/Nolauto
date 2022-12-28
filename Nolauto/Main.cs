@@ -18,6 +18,7 @@ namespace Nolauto
             InitializeComponent();
 
             GestoreVeicoli.Inizializza();
+            GestoreClienti.Inizializza();
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,11 +48,28 @@ namespace Nolauto
 
         private void aggiungiNoleggioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var avDialog = new AggiungiNoleggioDialog())
+            using (var anDialog = new AggiungiNoleggioDialog())
             {
-                avDialog.ShowDialog();
+                anDialog.ShowDialog();
                 UpdateView();
             }
+        }
+
+        private void aggiungiClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var acDialog = new AggiungiClienteDialog())
+            {
+                acDialog.ShowDialog();
+                UpdateView();
+            }
+        }
+
+        private void rimuoviClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string codiceFiscale = (sender as ToolStripMenuItem).Name;
+
+            GestoreClienti.RimuoviCliente(codiceFiscale);
+            UpdateMenu();
         }
 
         private void UpdateView()
@@ -94,6 +112,15 @@ namespace Nolauto
                 item.Name = v.Targa;
                 item.Click += rimuoviVeicoloToolStripMenuItem_Click;
                 rimuoviVeicoloToolStripMenuItem.DropDownItems.Add(item);
+            }
+
+            rimuoviClienteToolStripMenuItem.DropDownItems.Clear();
+            foreach (Cliente c in GestoreClienti.GetAll())
+            {
+                ToolStripMenuItem item = new ToolStripMenuItem(c.ToString());
+                item.Name = c.CodiceFiscale;
+                item.Click += rimuoviClienteToolStripMenuItem_Click;
+                rimuoviClienteToolStripMenuItem.DropDownItems.Add(item);
             }
         }
     }

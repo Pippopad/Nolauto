@@ -16,14 +16,20 @@ namespace Nolauto
             return re.Matches(targa).Count != 0;
         }
 
-        public static void MsgErrore(string messaggio, string titolo)
+        public static bool ControlloCodiceFiscale(string codiceFiscale)
         {
-            MessageBox.Show(messaggio, titolo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Regex re = new Regex(@"^[a-zA-Z]{6}[\d]{2}[a-zA-Z]{1}[\d]{2}[a-zA-Z]{1}[\d]{3}[a-zA-Z]{1}$");
+            return re.Matches(codiceFiscale).Count != 0;
         }
 
         public static bool ControlloStringa(string str)
         {
             return !string.IsNullOrWhiteSpace(str);
+        }
+
+        public static void MsgErrore(string messaggio, string titolo)
+        {
+            MessageBox.Show(messaggio, titolo, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

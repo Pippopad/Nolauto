@@ -43,6 +43,10 @@
             this.rimuoviVeicoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.aggiungiNoleggioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rimuoviNoleggioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.aggiungiClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rimuoviClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstVeicoli = new System.Windows.Forms.ListView();
             this.colTarga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,10 +62,6 @@
             this.colNumeroGiorni = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCosto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.rimuoviNoleggioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.aggiungiClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rimuoviClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -154,14 +154,14 @@
             // automobileToolStripMenuItem
             // 
             this.automobileToolStripMenuItem.Name = "automobileToolStripMenuItem";
-            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.automobileToolStripMenuItem.Text = "&Automobile";
             this.automobileToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // furgoneToolStripMenuItem
             // 
             this.furgoneToolStripMenuItem.Name = "furgoneToolStripMenuItem";
-            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.furgoneToolStripMenuItem.Text = "&Furgone";
             this.furgoneToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
@@ -182,6 +182,30 @@
             this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aggiungiNoleggioToolStripMenuItem.Text = "A&ggiungi noleggio";
             this.aggiungiNoleggioToolStripMenuItem.Click += new System.EventHandler(this.aggiungiNoleggioToolStripMenuItem_Click);
+            // 
+            // rimuoviNoleggioToolStripMenuItem
+            // 
+            this.rimuoviNoleggioToolStripMenuItem.Name = "rimuoviNoleggioToolStripMenuItem";
+            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviNoleggioToolStripMenuItem.Text = "R&imuovi noleggio";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // aggiungiClienteToolStripMenuItem
+            // 
+            this.aggiungiClienteToolStripMenuItem.Name = "aggiungiClienteToolStripMenuItem";
+            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiClienteToolStripMenuItem.Text = "Aggi&ungi cliente";
+            this.aggiungiClienteToolStripMenuItem.Click += new System.EventHandler(this.aggiungiClienteToolStripMenuItem_Click);
+            // 
+            // rimuoviClienteToolStripMenuItem
+            // 
+            this.rimuoviClienteToolStripMenuItem.Name = "rimuoviClienteToolStripMenuItem";
+            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviClienteToolStripMenuItem.Text = "Ri&muovi cliente";
             // 
             // groupBox1
             // 
@@ -295,29 +319,6 @@
             // 
             this.colCliente.Text = "Cliente";
             this.colCliente.Width = 150;
-            // 
-            // rimuoviNoleggioToolStripMenuItem
-            // 
-            this.rimuoviNoleggioToolStripMenuItem.Name = "rimuoviNoleggioToolStripMenuItem";
-            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rimuoviNoleggioToolStripMenuItem.Text = "R&imuovi noleggio";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
-            // 
-            // aggiungiClienteToolStripMenuItem
-            // 
-            this.aggiungiClienteToolStripMenuItem.Name = "aggiungiClienteToolStripMenuItem";
-            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aggiungiClienteToolStripMenuItem.Text = "Aggi&ungi cliente";
-            // 
-            // rimuoviClienteToolStripMenuItem
-            // 
-            this.rimuoviClienteToolStripMenuItem.Name = "rimuoviClienteToolStripMenuItem";
-            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rimuoviClienteToolStripMenuItem.Text = "Ri&muovi cliente";
             // 
             // Main
             // 
