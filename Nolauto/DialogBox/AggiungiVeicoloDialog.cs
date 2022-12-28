@@ -73,7 +73,12 @@ namespace Nolauto.DialogBox
                     v = new Furgone(targa, marca, tariffa, kilowatt, postiCapacita);
                     break;
             }
-            GestoreVeicoli.AggiungiVeicolo(v);
+
+            if (!GestoreVeicoli.AggiungiVeicolo(v))
+            {
+                Helper.MsgErrore("Esiste già un veicolo con questa targa!", this.Text);
+                return;
+            }
 
             this.DialogResult = DialogResult.OK;
         }
