@@ -90,7 +90,7 @@ namespace Nolauto
             rimuoviVeicoloToolStripMenuItem.DropDownItems.Clear();
             foreach (Veicolo v in GestoreVeicoli.GetAll())
             {
-                ToolStripMenuItem item = new ToolStripMenuItem($"{v.Marca} ({v.Targa})");
+                ToolStripMenuItem item = new ToolStripMenuItem(v.ToString());
                 item.Name = v.Targa;
                 item.Click += rimuoviVeicoloToolStripMenuItem_Click;
                 rimuoviVeicoloToolStripMenuItem.DropDownItems.Add(item);

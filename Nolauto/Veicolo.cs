@@ -26,5 +26,10 @@ namespace Nolauto
             this.Tariffa = tariffa;
             this.Kilowatt = kilowatt;
         }
+
+        public override string ToString()
+        {
+            return $"{this.Marca} ({this.Targa})";
+        }
     }
 }
