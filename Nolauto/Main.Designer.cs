@@ -140,7 +140,7 @@
             this.automobileToolStripMenuItem,
             this.furgoneToolStripMenuItem});
             this.aggiungiVeicoloToolStripMenuItem.Name = "aggiungiVeicoloToolStripMenuItem";
-            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aggiungiVeicoloToolStripMenuItem.Text = "&Aggiungi veicolo";
             // 
             // automobileToolStripMenuItem
@@ -160,19 +160,20 @@
             // rimuoviVeicoloToolStripMenuItem
             // 
             this.rimuoviVeicoloToolStripMenuItem.Name = "rimuoviVeicoloToolStripMenuItem";
-            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rimuoviVeicoloToolStripMenuItem.Text = "&Rimuovi veicolo";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // aggiungiNoleggioToolStripMenuItem
             // 
             this.aggiungiNoleggioToolStripMenuItem.Name = "aggiungiNoleggioToolStripMenuItem";
-            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aggiungiNoleggioToolStripMenuItem.Text = "A&ggiungi noleggio";
+            this.aggiungiNoleggioToolStripMenuItem.Click += new System.EventHandler(this.aggiungiNoleggioToolStripMenuItem_Click);
             // 
             // groupBox1
             // 

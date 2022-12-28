@@ -45,6 +45,15 @@ namespace Nolauto
             UpdateView();
         }
 
+        private void aggiungiNoleggioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var avDialog = new AggiungiNoleggioDialog())
+            {
+                avDialog.ShowDialog();
+                UpdateView();
+            }
+        }
+
         private void UpdateView()
         {
             UpdateListView();
