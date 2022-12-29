@@ -148,63 +148,63 @@
             this.automobileToolStripMenuItem,
             this.furgoneToolStripMenuItem});
             this.aggiungiVeicoloToolStripMenuItem.Name = "aggiungiVeicoloToolStripMenuItem";
-            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.aggiungiVeicoloToolStripMenuItem.Text = "&Aggiungi veicolo";
             // 
             // automobileToolStripMenuItem
             // 
             this.automobileToolStripMenuItem.Name = "automobileToolStripMenuItem";
-            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.automobileToolStripMenuItem.Text = "&Automobile";
             this.automobileToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // furgoneToolStripMenuItem
             // 
             this.furgoneToolStripMenuItem.Name = "furgoneToolStripMenuItem";
-            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.furgoneToolStripMenuItem.Text = "&Furgone";
             this.furgoneToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // rimuoviVeicoloToolStripMenuItem
             // 
             this.rimuoviVeicoloToolStripMenuItem.Name = "rimuoviVeicoloToolStripMenuItem";
-            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.rimuoviVeicoloToolStripMenuItem.Text = "&Rimuovi veicolo";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
             // 
             // aggiungiNoleggioToolStripMenuItem
             // 
             this.aggiungiNoleggioToolStripMenuItem.Name = "aggiungiNoleggioToolStripMenuItem";
-            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.aggiungiNoleggioToolStripMenuItem.Text = "A&ggiungi noleggio";
             this.aggiungiNoleggioToolStripMenuItem.Click += new System.EventHandler(this.aggiungiNoleggioToolStripMenuItem_Click);
             // 
             // rimuoviNoleggioToolStripMenuItem
             // 
             this.rimuoviNoleggioToolStripMenuItem.Name = "rimuoviNoleggioToolStripMenuItem";
-            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.rimuoviNoleggioToolStripMenuItem.Text = "R&imuovi noleggio";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(170, 6);
             // 
             // aggiungiClienteToolStripMenuItem
             // 
             this.aggiungiClienteToolStripMenuItem.Name = "aggiungiClienteToolStripMenuItem";
-            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.aggiungiClienteToolStripMenuItem.Text = "Aggi&ungi cliente";
             this.aggiungiClienteToolStripMenuItem.Click += new System.EventHandler(this.aggiungiClienteToolStripMenuItem_Click);
             // 
             // rimuoviClienteToolStripMenuItem
             // 
             this.rimuoviClienteToolStripMenuItem.Name = "rimuoviClienteToolStripMenuItem";
-            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.rimuoviClienteToolStripMenuItem.Text = "Ri&muovi cliente";
             // 
             // groupBox1
@@ -236,6 +236,7 @@
             this.lstVeicoli.TabIndex = 0;
             this.lstVeicoli.UseCompatibleStateImageBehavior = false;
             this.lstVeicoli.View = System.Windows.Forms.View.Details;
+            this.lstVeicoli.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstVeicoli_ItemSelectionChanged);
             // 
             // colTarga
             // 

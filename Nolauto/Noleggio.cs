@@ -15,8 +15,9 @@ namespace Nolauto
         public int NumeroGiorni { get; set; }
         public double Costo { get; set; }
         public Cliente Cliente { get; }
+        public Veicolo Veicolo { get; }
 
-        public Noleggio(DateTime dataInizio, int numeroGiorni, double costo, Cliente cliente)
+        public Noleggio(DateTime dataInizio, int numeroGiorni, double costo, Cliente cliente, Veicolo veicolo)
         {
             this.Id = ID_COUNTER++;
 
@@ -24,6 +25,12 @@ namespace Nolauto
             this.NumeroGiorni = numeroGiorni;
             this.Costo = costo;
             this.Cliente = cliente;
+            this.Veicolo = veicolo;
+        }
+
+        public override string ToString()
+        {
+            return $"ID: {this.Id}\r\t\tTarga: {this.Veicolo.Targa}\r\t\t\t\t\tCliente: {this.Cliente.CodiceFiscale}";
         }
     }
 }

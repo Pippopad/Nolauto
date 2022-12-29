@@ -19,6 +19,7 @@ namespace Nolauto
 
             GestoreVeicoli.Inizializza();
             GestoreClienti.Inizializza();
+            GestoreNoleggi.Inizializza();
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +56,15 @@ namespace Nolauto
             }
         }
 
+        private void rimuoviNoleggioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse((sender as ToolStripMenuItem).Name);
+
+            GestoreNoleggi.RimuoviNoleggio(id);
+            UpdateMenu();
+            UpdateNoleggiListView();
+        }
+
         private void aggiungiClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var acDialog = new AggiungiClienteDialog())
@@ -72,14 +82,23 @@ namespace Nolauto
             UpdateMenu();
         }
 
+        private void lstVeicoli_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            UpdateNoleggiListView();
+        }
+
         private void UpdateView()
         {
-            UpdateListView();
+            UpdateVeicoliListView();
+            UpdateNoleggiListView();
             UpdateMenu();
         }
 
-        private void UpdateListView()
+        private void UpdateVeicoliListView()
         {
+            int selected = lstVeicoli.SelectedIndices.Count > 0 ? lstVeicoli.SelectedIndices[0] : -1;
+            string targa = selected != -1 ? lstVeicoli.SelectedItems[0].Text : null;
+
             lstVeicoli.Items.Clear();
             foreach (Veicolo v in GestoreVeicoli.GetAll())
             {
@@ -101,6 +120,37 @@ namespace Nolauto
 
                 lstVeicoli.Items.Add(item);
             }
+
+            if (selected != -1)
+            {
+                int idx = 0;
+                foreach (ListViewItem item in lstVeicoli.Items)
+                {
+                    if (item.Text == targa)
+                    {
+                        lstVeicoli.SelectedIndices.Add(idx);
+                        break;
+                    }
+                    idx++;
+                }
+            }
+        }
+
+        private void UpdateNoleggiListView()
+        {
+            if (lstVeicoli.SelectedItems.Count > 0)
+            {
+                lstNoleggi.Items.Clear();
+                foreach (Noleggio n in GestoreNoleggi.GetByTarga(lstVeicoli.SelectedItems[0].Text))
+                {
+                    ListViewItem item = new ListViewItem(n.Id.ToString());
+                    item.SubItems.Add(n.DataInizio.ToShortDateString());
+                    item.SubItems.Add(n.NumeroGiorni.ToString());
+                    item.SubItems.Add(n.Costo.ToString());
+                    item.SubItems.Add(n.Cliente.ToString());
+                    lstNoleggi.Items.Add(item);
+                }
+            }
         }
 
         private void UpdateMenu()
@@ -121,6 +171,15 @@ namespace Nolauto
                 item.Name = c.CodiceFiscale;
                 item.Click += rimuoviClienteToolStripMenuItem_Click;
                 rimuoviClienteToolStripMenuItem.DropDownItems.Add(item);
+            }
+
+            rimuoviNoleggioToolStripMenuItem.DropDownItems.Clear();
+            foreach (Noleggio n in GestoreNoleggi.GetAll())
+            {
+                ToolStripMenuItem item = new ToolStripMenuItem(n.ToString());
+                item.Name = n.Id.ToString();
+                item.Click += rimuoviNoleggioToolStripMenuItem_Click;
+                rimuoviNoleggioToolStripMenuItem.DropDownItems.Add(item);
             }
         }
     }

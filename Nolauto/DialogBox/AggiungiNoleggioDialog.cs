@@ -12,6 +12,9 @@ namespace Nolauto.DialogBox
 {
     public partial class AggiungiNoleggioDialog : Form
     {
+        private Cliente cliente;
+        private Veicolo veicolo;
+
         public AggiungiNoleggioDialog()
         {
             InitializeComponent();
@@ -31,9 +34,12 @@ namespace Nolauto.DialogBox
                 return;
             }
 
-            // TODO: Validazione data
-
-            // Aggiunta noleggio
+            Noleggio risultato = GestoreNoleggi.AggiungiNoleggio(dtpDataInizio.Value, (int)txtNumeroGiorni.Value, (double)txtCosto.Value, cliente, veicolo);
+            if (risultato != null)
+            {
+                Helper.MsgErrore($"Impossibile noleggiare il veicolo per questa data perché è già stato prenotato! (ID: {risultato.Id})", this.Text);
+                return;
+            }
 
             this.DialogResult = DialogResult.OK;
         }
@@ -44,6 +50,7 @@ namespace Nolauto.DialogBox
             {
                 if (svDialog.ShowDialog() == DialogResult.OK)
                 {
+                    veicolo = svDialog.VeicoloSelezionato;
                     txtVeicolo.Text = svDialog.VeicoloSelezionato.Targa;
                 }
             }
@@ -55,6 +62,7 @@ namespace Nolauto.DialogBox
             {
                 if (scDialog.ShowDialog() == DialogResult.OK)
                 {
+                    cliente = scDialog.ClienteSelezionato;
                     txtCliente.Text = scDialog.ClienteSelezionato.CodiceFiscale;
                 }
             }

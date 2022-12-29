@@ -184,7 +184,8 @@
             // 
             this.dtpDataInizio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataInizio.Location = new System.Drawing.Point(141, 62);
-            this.dtpDataInizio.MinDate = new System.DateTime(2022, 12, 28, 0, 0, 0, 0);
+            this.dtpDataInizio.Value = System.DateTime.Today.AddDays(1);
+            this.dtpDataInizio.MinDate = System.DateTime.Today.AddDays(1);
             this.dtpDataInizio.Name = "dtpDataInizio";
             this.dtpDataInizio.Size = new System.Drawing.Size(95, 20);
             this.dtpDataInizio.TabIndex = 5;

@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="Furgone.cs" />
     <Compile Include="GestoreClienti.cs" />
+    <Compile Include="GestoreNoleggi.cs" />
     <Compile Include="GestoreVeicoli.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Main.cs">
