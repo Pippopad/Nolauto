@@ -94,36 +94,37 @@
             // nuovoToolStripMenuItem
             // 
             this.nuovoToolStripMenuItem.Name = "nuovoToolStripMenuItem";
-            this.nuovoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.nuovoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuovoToolStripMenuItem.Text = "&Nuovo";
+            this.nuovoToolStripMenuItem.Click += new System.EventHandler(this.nuovoToolStripMenuItem_Click);
             // 
             // apriToolStripMenuItem
             // 
             this.apriToolStripMenuItem.Name = "apriToolStripMenuItem";
-            this.apriToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.apriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.apriToolStripMenuItem.Text = "&Apri";
             // 
             // salvaToolStripMenuItem
             // 
             this.salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
-            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvaToolStripMenuItem.Text = "&Salva";
             // 
             // salvaComeToolStripMenuItem
             // 
             this.salvaComeToolStripMenuItem.Name = "salvaComeToolStripMenuItem";
-            this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvaComeToolStripMenuItem.Text = "Sa&lva come...";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // esciToolStripMenuItem
             // 
             this.esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            this.esciToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.esciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.esciToolStripMenuItem.Text = "&Esci";
             this.esciToolStripMenuItem.Click += new System.EventHandler(this.esciToolStripMenuItem_Click);
             // 

@@ -22,6 +22,15 @@ namespace Nolauto
             GestoreNoleggi.Inizializza();
         }
 
+        private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestoreVeicoli.Inizializza();
+            GestoreClienti.Inizializza();
+            GestoreNoleggi.Inizializza();
+
+            UpdateView();
+        }
+
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -138,9 +147,9 @@ namespace Nolauto
 
         private void UpdateNoleggiListView()
         {
+            lstNoleggi.Items.Clear();
             if (lstVeicoli.SelectedItems.Count > 0)
             {
-                lstNoleggi.Items.Clear();
                 foreach (Noleggio n in GestoreNoleggi.GetByTarga(lstVeicoli.SelectedItems[0].Text))
                 {
                     ListViewItem item = new ListViewItem(n.Id.ToString());
