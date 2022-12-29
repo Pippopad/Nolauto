@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Nolauto.DialogBox
 {
@@ -52,6 +53,8 @@ namespace Nolauto.DialogBox
                 {
                     veicolo = svDialog.VeicoloSelezionato;
                     txtVeicolo.Text = svDialog.VeicoloSelezionato.Targa;
+
+                    txtCosto.Value = (decimal)svDialog.VeicoloSelezionato.Tariffa * txtNumeroGiorni.Value;
                 }
             }
         }
@@ -66,6 +69,11 @@ namespace Nolauto.DialogBox
                     txtCliente.Text = scDialog.ClienteSelezionato.CodiceFiscale;
                 }
             }
+        }
+
+        private void txtNumeroGiorni_ValueChanged(object sender, EventArgs e)
+        {
+            txtCosto.Value = (decimal)veicolo.Tariffa * txtNumeroGiorni.Value;
         }
     }
 }
