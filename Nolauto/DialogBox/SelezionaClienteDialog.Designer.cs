@@ -39,6 +39,7 @@
             this.lstClienti.Name = "lstClienti";
             this.lstClienti.Size = new System.Drawing.Size(270, 309);
             this.lstClienti.TabIndex = 0;
+            this.lstClienti.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstClienti_KeyPress);
             this.lstClienti.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstClienti_MouseDoubleClick);
             // 
             // SelezionaClienteDialog

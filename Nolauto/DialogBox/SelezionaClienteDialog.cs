@@ -33,5 +33,14 @@ namespace Nolauto.DialogBox
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        private void lstClienti_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (lstClienti.SelectedIndex != ListBox.NoMatches)
+            {
+                ClienteSelezionato = lstClienti.SelectedItem as Cliente;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
     }
 }

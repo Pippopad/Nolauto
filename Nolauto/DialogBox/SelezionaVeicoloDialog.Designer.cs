@@ -39,6 +39,7 @@
             this.lstVeicoli.Name = "lstVeicoli";
             this.lstVeicoli.Size = new System.Drawing.Size(189, 309);
             this.lstVeicoli.TabIndex = 0;
+            this.lstVeicoli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstVeicoli_KeyPress);
             this.lstVeicoli.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstVeicoli_MouseDoubleClick);
             // 
             // SelezionaVeicoloDialog

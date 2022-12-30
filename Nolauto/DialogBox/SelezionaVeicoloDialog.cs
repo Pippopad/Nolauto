@@ -33,5 +33,14 @@ namespace Nolauto.DialogBox
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        private void lstVeicoli_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (lstVeicoli.SelectedIndex != ListBox.NoMatches)
+            {
+                VeicoloSelezionato = lstVeicoli.SelectedItem as Veicolo;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
     }
 }
