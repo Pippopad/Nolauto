@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +14,15 @@ namespace Nolauto
         Furgone,
     }
 
+    [JsonConverter(typeof(BaseClassConverter))]
     public abstract class Veicolo
     {
-        public string Targa { get; }
-        public string Marca { get; }
-        public double Tariffa { get; }
-        public double Kilowatt { get; }
+        public abstract TipoVeicolo __tipo__ { get; }
 
-        public Veicolo(string targa, string marca, double tariffa, double kilowatt)
-        {
-            this.Targa = targa.ToUpper();
-            this.Marca = marca;
-            this.Tariffa = tariffa;
-            this.Kilowatt = kilowatt;
-        }
+        public string Targa { get; set; }
+        public string Marca { get; set; }
+        public double Tariffa { get; set; }
+        public double Kilowatt { get; set; }
 
         public override string ToString()
         {

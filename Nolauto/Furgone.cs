@@ -8,11 +8,8 @@ namespace Nolauto
 {
     public class Furgone : Veicolo
     {
-        public double CapacitaDiCarico { get; set; }
+        public override TipoVeicolo __tipo__ => TipoVeicolo.Furgone;
 
-        public Furgone(string targa, string marca, double tariffa, double kilowatt, double capacitaDiCarico) : base(targa, marca, tariffa, kilowatt)
-        {
-            this.CapacitaDiCarico = capacitaDiCarico;
-        }
+        public double CapacitaDiCarico { get; set; }
     }
 }

@@ -73,7 +73,8 @@ namespace Nolauto.DialogBox
 
         private void txtNumeroGiorni_ValueChanged(object sender, EventArgs e)
         {
-            txtCosto.Value = (decimal)veicolo.Tariffa * txtNumeroGiorni.Value;
+            if (veicolo != null)
+                txtCosto.Value = (decimal)veicolo.Tariffa * txtNumeroGiorni.Value;
         }
     }
 }

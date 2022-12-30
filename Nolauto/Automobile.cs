@@ -8,11 +8,8 @@ namespace Nolauto
 {
     public class Automobile : Veicolo
     {
-        public int NumeroPosti { get; set; }
+        public override TipoVeicolo __tipo__ => TipoVeicolo.Automobile;
 
-        public Automobile(string targa, string marca, double tariffa, double kilowatt, int numeroPosti) : base(targa, marca, tariffa, kilowatt)
-        {
-            this.NumeroPosti = numeroPosti;
-        }
+        public int NumeroPosti { get; set; }
     }
 }

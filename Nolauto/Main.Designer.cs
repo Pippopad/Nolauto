@@ -103,18 +103,21 @@
             this.apriToolStripMenuItem.Name = "apriToolStripMenuItem";
             this.apriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.apriToolStripMenuItem.Text = "&Apri";
+            this.apriToolStripMenuItem.Click += new System.EventHandler(this.apriToolStripMenuItem_Click);
             // 
             // salvaToolStripMenuItem
             // 
             this.salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
             this.salvaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvaToolStripMenuItem.Text = "&Salva";
+            this.salvaToolStripMenuItem.Click += new System.EventHandler(this.salvaToolStripMenuItem_Click);
             // 
             // salvaComeToolStripMenuItem
             // 
             this.salvaComeToolStripMenuItem.Name = "salvaComeToolStripMenuItem";
             this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvaComeToolStripMenuItem.Text = "Sa&lva come...";
+            this.salvaComeToolStripMenuItem.Click += new System.EventHandler(this.salvaComeToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 

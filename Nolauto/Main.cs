@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,18 +18,68 @@ namespace Nolauto
         {
             InitializeComponent();
 
-            GestoreVeicoli.Inizializza();
-            GestoreClienti.Inizializza();
-            GestoreNoleggi.Inizializza();
+            GestoreSalvataggi.Inizializza();
         }
 
         private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestoreVeicoli.Inizializza();
-            GestoreClienti.Inizializza();
-            GestoreNoleggi.Inizializza();
-
+            GestoreSalvataggi.Inizializza();
             UpdateView();
+        }
+
+        private void apriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var ofd = new OpenFileDialog())
+            {
+                ofd.Title = "Seleziona il progetto da aprire...";
+                ofd.Multiselect = false;
+                ofd.InitialDirectory = GestoreSalvataggi.ProjectsDir;
+                ofd.CheckFileExists = true;
+                ofd.Filter = "File JSON (*.json)|*.json";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    GestoreSalvataggi.PercorsoFile = ofd.FileName;
+
+                    if (!GestoreSalvataggi.Apri())
+                    {
+                        Helper.MsgErrore("Impossibile aprire il progetto!", this.Text);
+                        return;
+                    }
+
+                    UpdateView();
+                }
+            }
+        }
+
+        private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Helper.ControlloStringa(GestoreSalvataggi.PercorsoFile)) SaveDialog();
+            else GestoreSalvataggi.Salva();
+        }
+
+        private void salvaComeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveDialog();
+        }
+
+        private void SaveDialog()
+        {
+            using (var sfd = new SaveFileDialog())
+            {
+                sfd.Title = "Salva progetto come...";
+                sfd.FileName = Helper.ControlloStringa(GestoreSalvataggi.PercorsoFile) ? GestoreSalvataggi.PercorsoFile : "ProgettoSenzaNome.json";
+                sfd.InitialDirectory = GestoreSalvataggi.ProjectsDir;
+                sfd.CheckPathExists = true;
+                sfd.Filter = "File JSON (*.json)|*.json";
+                sfd.AddExtension = true;
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    GestoreSalvataggi.PercorsoFile = sfd.FileName;
+                    GestoreSalvataggi.Salva();
+                }
+            }
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)

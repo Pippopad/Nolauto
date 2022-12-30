@@ -67,10 +67,24 @@ namespace Nolauto.DialogBox
             switch (this.Tipo)
             {
                 case TipoVeicolo.Automobile:
-                    v = new Automobile(targa, marca, tariffa, kilowatt, (int)postiCapacita);
+                    v = new Automobile()
+                    {
+                        Targa = targa,
+                        Marca = marca,
+                        Tariffa = tariffa,
+                        Kilowatt = kilowatt,
+                        NumeroPosti = (int)postiCapacita
+                    };
                     break;
                 case TipoVeicolo.Furgone:
-                    v = new Furgone(targa, marca, tariffa, kilowatt, postiCapacita);
+                    v = new Furgone()
+                    {
+                        Targa = targa,
+                        Marca = marca,
+                        Tariffa = tariffa,
+                        Kilowatt = kilowatt,
+                        CapacitaDiCarico = (double)postiCapacita
+                    };
                     break;
             }
 

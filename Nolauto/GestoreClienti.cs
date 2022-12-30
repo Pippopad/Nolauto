@@ -14,7 +14,12 @@ namespace Nolauto
 
         public static void Inizializza()
         {
-            Clienti = new List<Cliente>();
+            Inizializza(new List<Cliente>());
+        }
+
+        public static void Inizializza(List<Cliente> clienti)
+        {
+            Clienti = clienti;
         }
 
         public static bool AggiungiCliente(Cliente c)

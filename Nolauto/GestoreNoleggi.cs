@@ -13,7 +13,12 @@ namespace Nolauto
 
         public static void Inizializza()
         {
-            Noleggi = new List<Noleggio>();
+            Inizializza(new List<Noleggio>());
+        }
+
+        public static void Inizializza(List<Noleggio> noleggi)
+        {
+            Noleggi = noleggi;
         }
 
         public static Noleggio AggiungiNoleggio(DateTime dataInizio, int numeroGiorni, double costo, Cliente cliente, Veicolo veicolo)

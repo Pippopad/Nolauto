@@ -14,7 +14,12 @@ namespace Nolauto
 
         public static void Inizializza()
         {
-            Veicoli = new List<Veicolo>();
+            Inizializza(new List<Veicolo>());
+        }
+
+        public static void Inizializza(List<Veicolo> veicoli)
+        {
+            Veicoli = veicoli;
         }
 
         public static bool AggiungiVeicolo(Veicolo v)
