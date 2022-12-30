@@ -185,11 +185,9 @@
             // 
             this.dtpDataInizio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataInizio.Location = new System.Drawing.Point(141, 62);
-            this.dtpDataInizio.MinDate = new System.DateTime(2022, 12, 30, 0, 0, 0, 0);
             this.dtpDataInizio.Name = "dtpDataInizio";
             this.dtpDataInizio.Size = new System.Drawing.Size(95, 20);
             this.dtpDataInizio.TabIndex = 5;
-            this.dtpDataInizio.Value = new System.DateTime(2022, 12, 30, 0, 0, 0, 0);
             // 
             // AggiungiNoleggioDialog
             // 

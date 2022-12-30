@@ -94,40 +94,46 @@
             // nuovoToolStripMenuItem
             // 
             this.nuovoToolStripMenuItem.Name = "nuovoToolStripMenuItem";
-            this.nuovoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuovoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.nuovoToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.nuovoToolStripMenuItem.Text = "&Nuovo";
             this.nuovoToolStripMenuItem.Click += new System.EventHandler(this.nuovoToolStripMenuItem_Click);
             // 
             // apriToolStripMenuItem
             // 
             this.apriToolStripMenuItem.Name = "apriToolStripMenuItem";
-            this.apriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apriToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.apriToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.apriToolStripMenuItem.Text = "&Apri";
             this.apriToolStripMenuItem.Click += new System.EventHandler(this.apriToolStripMenuItem_Click);
             // 
             // salvaToolStripMenuItem
             // 
             this.salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
-            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.salvaToolStripMenuItem.Text = "&Salva";
             this.salvaToolStripMenuItem.Click += new System.EventHandler(this.salvaToolStripMenuItem_Click);
             // 
             // salvaComeToolStripMenuItem
             // 
             this.salvaComeToolStripMenuItem.Name = "salvaComeToolStripMenuItem";
-            this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvaComeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.salvaComeToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.salvaComeToolStripMenuItem.Text = "Sa&lva come...";
             this.salvaComeToolStripMenuItem.Click += new System.EventHandler(this.salvaComeToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(212, 6);
             // 
             // esciToolStripMenuItem
             // 
             this.esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            this.esciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.esciToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.esciToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.esciToolStripMenuItem.Text = "&Esci";
             this.esciToolStripMenuItem.Click += new System.EventHandler(this.esciToolStripMenuItem_Click);
             // 
@@ -152,63 +158,67 @@
             this.automobileToolStripMenuItem,
             this.furgoneToolStripMenuItem});
             this.aggiungiVeicoloToolStripMenuItem.Name = "aggiungiVeicoloToolStripMenuItem";
-            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.aggiungiVeicoloToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.aggiungiVeicoloToolStripMenuItem.Text = "&Aggiungi veicolo";
             // 
             // automobileToolStripMenuItem
             // 
             this.automobileToolStripMenuItem.Name = "automobileToolStripMenuItem";
-            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.automobileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.automobileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.automobileToolStripMenuItem.Text = "&Automobile";
             this.automobileToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // furgoneToolStripMenuItem
             // 
             this.furgoneToolStripMenuItem.Name = "furgoneToolStripMenuItem";
-            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.furgoneToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.furgoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.furgoneToolStripMenuItem.Text = "&Furgone";
             this.furgoneToolStripMenuItem.Click += new System.EventHandler(this.aggiungiVeicoloToolStripMenuItem_Click);
             // 
             // rimuoviVeicoloToolStripMenuItem
             // 
             this.rimuoviVeicoloToolStripMenuItem.Name = "rimuoviVeicoloToolStripMenuItem";
-            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.rimuoviVeicoloToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.rimuoviVeicoloToolStripMenuItem.Text = "&Rimuovi veicolo";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(212, 6);
             // 
             // aggiungiNoleggioToolStripMenuItem
             // 
             this.aggiungiNoleggioToolStripMenuItem.Name = "aggiungiNoleggioToolStripMenuItem";
-            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.aggiungiNoleggioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.aggiungiNoleggioToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.aggiungiNoleggioToolStripMenuItem.Text = "A&ggiungi noleggio";
             this.aggiungiNoleggioToolStripMenuItem.Click += new System.EventHandler(this.aggiungiNoleggioToolStripMenuItem_Click);
             // 
             // rimuoviNoleggioToolStripMenuItem
             // 
             this.rimuoviNoleggioToolStripMenuItem.Name = "rimuoviNoleggioToolStripMenuItem";
-            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.rimuoviNoleggioToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.rimuoviNoleggioToolStripMenuItem.Text = "R&imuovi noleggio";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(212, 6);
             // 
             // aggiungiClienteToolStripMenuItem
             // 
             this.aggiungiClienteToolStripMenuItem.Name = "aggiungiClienteToolStripMenuItem";
-            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.aggiungiClienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.aggiungiClienteToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.aggiungiClienteToolStripMenuItem.Text = "Aggi&ungi cliente";
             this.aggiungiClienteToolStripMenuItem.Click += new System.EventHandler(this.aggiungiClienteToolStripMenuItem_Click);
             // 
             // rimuoviClienteToolStripMenuItem
             // 
             this.rimuoviClienteToolStripMenuItem.Name = "rimuoviClienteToolStripMenuItem";
-            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.rimuoviClienteToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.rimuoviClienteToolStripMenuItem.Text = "Ri&muovi cliente";
             // 
             // groupBox1

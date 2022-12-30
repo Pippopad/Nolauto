@@ -19,6 +19,8 @@ namespace Nolauto.DialogBox
         public AggiungiNoleggioDialog()
         {
             InitializeComponent();
+
+            dtpDataInizio.MinDate = DateTime.Today.AddDays(1);
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)
