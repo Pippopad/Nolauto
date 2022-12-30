@@ -18,7 +18,7 @@ namespace Nolauto
 
         public static Noleggio AggiungiNoleggio(DateTime dataInizio, int numeroGiorni, double costo, Cliente cliente, Veicolo veicolo)
         {
-            Noleggio found = Noleggi.Find((noleggio) => dataInizio <= noleggio.DataInizio.AddDays(noleggio.NumeroGiorni - 1) && veicolo.Targa == noleggio.Veicolo.Targa);
+            Noleggio found = Noleggi.Find((noleggio) => veicolo.Targa == noleggio.Veicolo.Targa && ((dataInizio >= noleggio.DataInizio && dataInizio <= noleggio.DataInizio.AddDays(noleggio.NumeroGiorni - 1)) || (dataInizio < noleggio.DataInizio && dataInizio.AddDays(numeroGiorni - 1) >= noleggio.DataInizio)));
             if (found != null) return found;
 
             Noleggi.Add(new Noleggio(dataInizio, numeroGiorni, costo, cliente, veicolo));
@@ -51,20 +51,20 @@ namespace Nolauto
 
         public static List<Noleggio> GetByVeicolo(Veicolo v)
         {
-            return GetByTarga(v.Targa);
+            return GetByVeicolo(v.Targa);
         }
 
-        public static List<Noleggio> GetByTarga(string targa)
+        public static List<Noleggio> GetByVeicolo(string targa)
         {
             return Noleggi.FindAll((noleggio) => noleggio.Veicolo.Targa == targa);
         }
 
         public static List<Noleggio> GetByCliente(Cliente c)
         {
-            return GetByCodiceFiscale(c.CodiceFiscale);
+            return GetByCliente(c.CodiceFiscale);
         }
 
-        public static List<Noleggio> GetByCodiceFiscale(string codiceFiscale)
+        public static List<Noleggio> GetByCliente(string codiceFiscale)
         {
             return Noleggi.FindAll((noleggio) => noleggio.Cliente.CodiceFiscale == codiceFiscale);
         }

@@ -52,7 +52,11 @@ namespace Nolauto
         {
             string targa = (sender as ToolStripMenuItem).Name;
 
-            GestoreVeicoli.RimuoviVeicolo(targa);
+            if (GestoreVeicoli.RimuoviVeicolo(targa))
+            {
+                foreach (Noleggio n in GestoreNoleggi.GetByVeicolo(targa))
+                    GestoreNoleggi.RimuoviNoleggio(n);
+            }
             UpdateView();
         }
 
@@ -87,8 +91,13 @@ namespace Nolauto
         {
             string codiceFiscale = (sender as ToolStripMenuItem).Name;
 
-            GestoreClienti.RimuoviCliente(codiceFiscale);
-            UpdateMenu();
+            if (GestoreClienti.RimuoviCliente(codiceFiscale))
+            {
+                foreach (Noleggio n in GestoreNoleggi.GetByCliente(codiceFiscale))
+                    GestoreNoleggi.RimuoviNoleggio(n);
+            }
+
+            UpdateView();
         }
 
         private void lstVeicoli_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -150,7 +159,7 @@ namespace Nolauto
             lstNoleggi.Items.Clear();
             if (lstVeicoli.SelectedItems.Count > 0)
             {
-                foreach (Noleggio n in GestoreNoleggi.GetByTarga(lstVeicoli.SelectedItems[0].Text))
+                foreach (Noleggio n in GestoreNoleggi.GetByVeicolo(lstVeicoli.SelectedItems[0].Text))
                 {
                     ListViewItem item = new ListViewItem(n.Id.ToString());
                     item.SubItems.Add(n.DataInizio.ToShortDateString());
