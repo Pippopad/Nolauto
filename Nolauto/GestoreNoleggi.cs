@@ -26,7 +26,14 @@ namespace Nolauto
             Noleggio found = Noleggi.Find((noleggio) => veicolo.Targa == noleggio.Veicolo.Targa && ((dataInizio >= noleggio.DataInizio && dataInizio <= noleggio.DataInizio.AddDays(noleggio.NumeroGiorni - 1)) || (dataInizio < noleggio.DataInizio && dataInizio.AddDays(numeroGiorni - 1) >= noleggio.DataInizio)));
             if (found != null) return found;
 
-            Noleggi.Add(new Noleggio(dataInizio, numeroGiorni, costo, cliente, veicolo));
+            Noleggi.Add(new Noleggio()
+            {
+                DataInizio = dataInizio,
+                NumeroGiorni = numeroGiorni,
+                Costo = costo,
+                Cliente = cliente,
+                Veicolo = veicolo,
+            });
             return null;
         }
 

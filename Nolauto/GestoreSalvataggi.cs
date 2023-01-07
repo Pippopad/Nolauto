@@ -14,11 +14,21 @@ namespace Nolauto
 {
     public static class GestoreSalvataggi
     {
-        class DatiSalvataggio
+        struct DatiSalvataggio
         {
             public List<Veicolo> veicoli { get; set; }
             public List<Cliente> clienti { get; set; }
-            public List<Noleggio> noleggi { get; set; }
+            public List<NoleggioSalvataggio> noleggi { get; set; }
+        };
+
+        struct NoleggioSalvataggio
+        {
+            public int Id { get; set; }
+            public DateTime DataInizio { get; set; }
+            public int NumeroGiorni { get; set; }
+            public double Costo { get; set; }
+            public string Cliente { get; set; }
+            public string Veicolo { get; set; }
         };
 
         public static string PercorsoFile;
@@ -54,7 +64,26 @@ namespace Nolauto
 
                 GestoreVeicoli.Inizializza(dati.veicoli);
                 GestoreClienti.Inizializza(dati.clienti);
-                GestoreNoleggi.Inizializza(dati.noleggi);
+
+                List<Noleggio> noleggi = new List<Noleggio>();
+                bool valido = true;
+                dati.noleggi.ForEach((noleggio) =>
+                {
+                    noleggi.Add(new Noleggio()
+                    {
+                        Id = noleggio.Id,
+                        DataInizio = noleggio.DataInizio,
+                        NumeroGiorni = noleggio.NumeroGiorni,
+                        Costo = noleggio.Costo,
+                        Cliente = GestoreClienti.Get(noleggio.Cliente),
+                        Veicolo = GestoreVeicoli.Get(noleggio.Veicolo),
+                    });
+
+                    valido &= noleggi.Last().Cliente != null && noleggi.Last().Veicolo != null;
+                });
+                if (!valido) return false;
+
+                GestoreNoleggi.Inizializza(noleggi);
 
                 return true;
             }
@@ -68,11 +97,24 @@ namespace Nolauto
         {
             if (!Helper.ControlloStringa(PercorsoFile)) return;
 
+            List<NoleggioSalvataggio> noleggi = new List<NoleggioSalvataggio>();
+            GestoreNoleggi.GetAll().ForEach((noleggio) => {
+                noleggi.Add(new NoleggioSalvataggio()
+                {
+                    Id = noleggio.Id,
+                    DataInizio = noleggio.DataInizio,
+                    NumeroGiorni = noleggio.NumeroGiorni,
+                    Costo = noleggio.Costo,
+                    Cliente = noleggio.Cliente.CodiceFiscale,
+                    Veicolo = noleggio.Veicolo.Targa,
+                });
+            });
+
             DatiSalvataggio dati = new DatiSalvataggio()
             {
                 veicoli = GestoreVeicoli.GetAll(),
                 clienti = GestoreClienti.GetAll(),
-                noleggi = GestoreNoleggi.GetAll(),
+                noleggi = noleggi,
             };
 
             var json = JsonConvert.SerializeObject(dati, Formatting.Indented);
