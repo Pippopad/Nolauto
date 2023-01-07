@@ -41,6 +41,10 @@ namespace Nolauto.DialogBox
             InitializeComponent();
 
             this.Tipo = TipoVeicolo.Automobile;
+
+            Button cancel = new Button();
+            cancel.Click += (s, o) => this.DialogResult = DialogResult.Abort;
+            this.CancelButton = cancel;
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)

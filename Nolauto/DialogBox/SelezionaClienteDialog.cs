@@ -22,6 +22,10 @@ namespace Nolauto.DialogBox
             {
                 lstClienti.Items.Add(v);
             }
+
+            Button cancel = new Button();
+            cancel.Click += (s, o) => this.DialogResult = DialogResult.Abort;
+            this.CancelButton = cancel;
         }
 
         private void lstClienti_MouseDoubleClick(object sender, MouseEventArgs e)
