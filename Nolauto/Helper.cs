@@ -10,6 +10,8 @@ namespace Nolauto
 {
     public static class Helper
     {
+        public static string[] Arguments;
+
         public static bool ControlloTarga(string targa)
         {
             Regex re = new Regex(@"^[a-zA-Z]{2}[\d]{3}[a-zA-Z]{2}$");
