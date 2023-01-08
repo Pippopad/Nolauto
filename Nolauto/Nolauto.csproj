@@ -85,7 +85,7 @@
       <DependentUpon>SelezionaVeicoloDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Furgone.cs" />
-    <Compile Include="GestioneSalvataggi.cs" />
+    <Compile Include="GestoreSalvataggi.cs" />
     <Compile Include="GestoreClienti.cs" />
     <Compile Include="GestoreNoleggi.cs" />
     <Compile Include="GestoreVeicoli.cs" />

@@ -18,7 +18,21 @@ namespace Nolauto
         {
             InitializeComponent();
 
-            GestoreSalvataggi.Inizializza();
+            if (Helper.Arguments.Length != 0)
+            {
+                GestoreSalvataggi.PercorsoFile = Helper.Arguments[0];
+                if (!GestoreSalvataggi.Apri())
+                {
+                    Helper.MsgErrore("Impossibile aprire il progetto!", this.Text);
+                    GestoreSalvataggi.PercorsoFile = "";
+                    GestoreSalvataggi.Inizializza();
+                }
+                UpdateView();
+            }
+            else
+            {
+                GestoreSalvataggi.Inizializza();
+            }
         }
 
         private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +58,7 @@ namespace Nolauto
                     if (!GestoreSalvataggi.Apri())
                     {
                         Helper.MsgErrore("Impossibile aprire il progetto!", this.Text);
+                        GestoreSalvataggi.PercorsoFile = "";
                         return;
                     }
 

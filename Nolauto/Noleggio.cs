@@ -10,22 +10,16 @@ namespace Nolauto
     {
         private static int ID_COUNTER = 0;
 
-        public int Id { get; }
+        public int Id { get; set; }
         public DateTime DataInizio { get; set; }
         public int NumeroGiorni { get; set; }
         public double Costo { get; set; }
-        public Cliente Cliente { get; }
-        public Veicolo Veicolo { get; }
+        public Cliente Cliente { get; set; }
+        public Veicolo Veicolo { get; set; }
 
-        public Noleggio(DateTime dataInizio, int numeroGiorni, double costo, Cliente cliente, Veicolo veicolo)
+        public Noleggio()
         {
             this.Id = ID_COUNTER++;
-
-            this.DataInizio = dataInizio;
-            this.NumeroGiorni = numeroGiorni;
-            this.Costo = costo;
-            this.Cliente = cliente;
-            this.Veicolo = veicolo;
         }
 
         public override string ToString()

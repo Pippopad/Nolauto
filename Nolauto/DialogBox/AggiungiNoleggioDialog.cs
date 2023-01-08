@@ -21,6 +21,10 @@ namespace Nolauto.DialogBox
             InitializeComponent();
 
             dtpDataInizio.MinDate = DateTime.Today.AddDays(1);
+
+            Button cancel = new Button();
+            cancel.Click += (s, o) => this.DialogResult = DialogResult.Abort;
+            this.CancelButton = cancel;
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)

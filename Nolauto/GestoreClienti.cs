@@ -26,6 +26,7 @@ namespace Nolauto
         {
             if (Clienti.Find((cliente) => cliente.CodiceFiscale == c.CodiceFiscale) != null) return false;
 
+            c.CodiceFiscale = c.CodiceFiscale.ToUpper();
             Clienti.Add(c);
             return true;
         }

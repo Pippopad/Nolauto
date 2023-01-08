@@ -26,6 +26,7 @@ namespace Nolauto
         {
             if (Veicoli.Find((veicolo) => veicolo.Targa == v.Targa) != null) return false;
 
+            v.Targa = v.Targa.ToUpper();
             Veicoli.Add(v);
             return true;
         }
