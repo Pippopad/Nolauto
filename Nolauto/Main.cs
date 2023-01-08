@@ -44,6 +44,7 @@ namespace Nolauto
                     if (!GestoreSalvataggi.Apri())
                     {
                         Helper.MsgErrore("Impossibile aprire il progetto!", this.Text);
+                        GestoreSalvataggi.PercorsoFile = "";
                         return;
                     }
 
