@@ -18,9 +18,9 @@ namespace Nolauto
         {
             InitializeComponent();
 
-            if (Helper.Arguments.Length != 0)
+            if (Helper.Argomenti.Length != 0)
             {
-                GestoreSalvataggi.PercorsoFile = Helper.Arguments[0];
+                GestoreSalvataggi.PercorsoFile = Helper.Argomenti[0];
                 if (!GestoreSalvataggi.Apri())
                 {
                     Helper.MsgErrore("Impossibile aprire il progetto!", this.Text);

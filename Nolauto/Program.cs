@@ -14,7 +14,7 @@ namespace Nolauto
         [STAThread]
         static void Main(string[] args)
         {
-            Helper.Arguments = args;
+            Helper.Argomenti = args;
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
