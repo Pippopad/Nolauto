@@ -10,7 +10,7 @@ namespace Nolauto
 {
     public static class Helper
     {
-        public static string[] Arguments;
+        public static string[] Argomenti;
 
         public static bool ControlloTarga(string targa)
         {

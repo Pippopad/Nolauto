@@ -18,9 +18,12 @@ namespace Nolauto
         {
             InitializeComponent();
 
-            if (Helper.Arguments.Length != 0)
+            // Se il programma viene aperto trascinando un progetto
+            // su di esso allora viene caricato il progetto.
+            // Altrimenti vengono inizializzate le liste.
+            if (Helper.Argomenti.Length != 0)
             {
-                GestoreSalvataggi.PercorsoFile = Helper.Arguments[0];
+                GestoreSalvataggi.PercorsoFile = Helper.Argomenti[0];
                 if (!GestoreSalvataggi.Apri())
                 {
                     Helper.MsgErrore("Impossibile aprire il progetto!", this.Text);
@@ -31,18 +34,23 @@ namespace Nolauto
             }
             else
             {
+                // Inizializza la lista dei veicoli, dei clienti e quella dei noleggi
                 GestoreSalvataggi.Inizializza();
             }
         }
 
         private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Per creare un nuovo progetto (resettare il programma),
+            // vengono reinizializzate le liste e viene aggiornata
+            // anche la visuale.
             GestoreSalvataggi.Inizializza();
             UpdateView();
         }
 
         private void apriToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Apre il menù di selezione del progetto e prova ad aprirlo
             using (var ofd = new OpenFileDialog())
             {
                 ofd.Title = "Seleziona il progetto da aprire...";
@@ -69,12 +77,19 @@ namespace Nolauto
 
         private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Se si sta modificando un progetto allora
+            // la funzione salva aggiornerà il file,
+            // altrimenti viene mostra la finestra per
+            // selezionare la destinazione del progetto
+            // da salvare.
             if (!Helper.ControlloStringa(GestoreSalvataggi.PercorsoFile)) SaveDialog();
             else GestoreSalvataggi.Salva();
         }
 
         private void salvaComeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Simile al "Salva" ma mostra direttamente la finestra per
+            // selezionare la destinazione del progetto da salvare.
             SaveDialog();
         }
 
@@ -168,11 +183,14 @@ namespace Nolauto
 
         private void lstVeicoli_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
+            // Aggiorna la ListView dei noleggi quando
+            // viene selezionato un'altro veicolo.
             UpdateNoleggiListView();
         }
 
         private void UpdateView()
         {
+            // Aggiorna tutti gli elementi della visuale dinamici.
             UpdateVeicoliListView();
             UpdateNoleggiListView();
             UpdateMenu();
